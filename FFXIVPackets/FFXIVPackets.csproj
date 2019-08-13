@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{058A56FC-1864-4A64-90E5-CF84D0A31CC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FFXIV.Packets</RootNamespace>
+    <AssemblyName>FFXIVPackets</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chat\Opcodes\ChatS2CAuth.cs" />
+    <Compile Include="Common\Vector.cs" />
+    <Compile Include="Common\StatusEffect.cs" />
+    <Compile Include="Lobby\LobbyC2SConnect.cs" />
+    <Compile Include="Lobby\LobbyS2CAuth.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyC2SAuth.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyC2SCharConnect.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyC2SCharList.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CAccountList.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CCharList.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CQueue.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CWorldEnter.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CWorldList.cs" />
+    <Compile Include="Lobby\Opcodes\LobbyS2CWorldOpen.cs" />
+    <Compile Include="NetworkKey.cs" />
+    <Compile Include="Opcode.cs" />
+    <Compile Include="OpcodePacket.cs" />
+    <Compile Include="Packet.cs" />
+    <Compile Include="PacketId.cs" />
+    <Compile Include="Ping.cs" />
+    <Compile Include="Pong.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawPacket.cs" />
+    <Compile Include="SubPacket.cs" />
+    <Compile Include="World\Opcodes\WorldC2SClientTrigger.cs" />
+    <Compile Include="World\Opcodes\WorldC2SHousingUpdateObjectPosition.cs" />
+    <Compile Include="World\Opcodes\WorldC2SLandRenameHandler.cs" />
+    <Compile Include="World\Opcodes\WorldC2SPing.cs" />
+    <Compile Include="World\Opcodes\WorldC2STriadMenu.cs" />
+    <Compile Include="World\Opcodes\WorldC2STriadPlay.cs" />
+    <Compile Include="World\Opcodes\WorldC2STriadPlayCard.cs" />
+    <Compile Include="World\Opcodes\WorldC2SUpdatePosition.cs" />
+    <Compile Include="World\Opcodes\WorldInit.cs" />
+    <Compile Include="World\Opcodes\WorldS2CActorControl142.cs" />
+    <Compile Include="World\Opcodes\WorldS2CActorControl143.cs" />
+    <Compile Include="World\Opcodes\WorldS2CActorMove.cs" />
+    <Compile Include="World\Opcodes\WorldS2CContainerInfo.cs" />
+    <Compile Include="World\Opcodes\WorldS2CCurrencyCrystalInfo.cs" />
+    <Compile Include="World\Opcodes\WorldS2CGCAffiliation.cs" />
+    <Compile Include="World\Opcodes\WorldS2CHousingLandFlags.cs" />
+    <Compile Include="World\Opcodes\WorldS2CHuntingLogEntry.cs" />
+    <Compile Include="World\Opcodes\WorldS2CInitZone.cs" />
+    <Compile Include="World\Opcodes\WorldS2CInventoryActionAck.cs" />
+    <Compile Include="World\Opcodes\WorldS2CInventoryTransaction.cs" />
+    <Compile Include="World\Opcodes\WorldS2CInventoryTransactionFinish.cs" />
+    <Compile Include="World\Opcodes\WorldS2CItemInfo.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPersistantEffect.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPlayerClassInfo.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPlayerSetup.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPlayerSpawn.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPlayerStateFlags.cs" />
+    <Compile Include="World\Opcodes\WorldS2CPlayerStats.cs" />
+    <Compile Include="World\Opcodes\WorldS2CQuestActiveList.cs" />
+    <Compile Include="World\Opcodes\WorldS2CQuestCompleteList.cs" />
+    <Compile Include="World\Opcodes\WorldS2CQuestTracker.cs" />
+    <Compile Include="World\Opcodes\WorldS2CSetOnlineStatus.cs" />
+    <Compile Include="World\Opcodes\WorldS2CUpdateClassInfo.cs" />
+    <Compile Include="World\Opcodes\WorldS2CUpdateHpMpTp.cs" />
+    <Compile Include="World\WorldC2SConnect.cs" />
+    <Compile Include="World\WorldS2CAuth.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FFXIVCommon\FFXIVCommon.csproj">
+      <Project>{c883a5d1-6bcf-4be0-8184-36fbea9b5be8}</Project>
+      <Name>FFXIVCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
